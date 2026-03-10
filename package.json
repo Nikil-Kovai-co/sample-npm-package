@@ -1,6 +1,6 @@
 {
   "name": "@nikil.srinivasan/sample-npm-package",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "Sample npm package",
   "main": "index.js",
   "type": "module",
