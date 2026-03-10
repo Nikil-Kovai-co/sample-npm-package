@@ -21,8 +21,11 @@ jobs:
         with:
           node-version: 20
           registry-url: https://registry.npmjs.org
-          scope: "@nikil.srinivasan"
 
-      - run: npm install
+      - name: Install dependencies
+        run: npm install
 
-      - run: npm publish --provenance --access public
+      - name: Publish package
+        run: npm publish --provenance --access public
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
