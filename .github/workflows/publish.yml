@@ -14,31 +14,15 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
 
-      - name: Print GitHub OIDC context
-        run: |
-          echo "GITHUB_REPOSITORY=$GITHUB_REPOSITORY"
-          echo "GITHUB_REF=$GITHUB_REF"
-          echo "GITHUB_WORKFLOW_REF=$GITHUB_WORKFLOW_REF"
-
-      - name: Setup Node.js
+      - name: Setup Node
         uses: actions/setup-node@v4
         with:
           node-version: 20
           registry-url: https://registry.npmjs.org
+          scope: "@nikil.srinivasan"
 
-      - name: Install dependencies
-        run: npm ci || npm install
+      - run: npm install
 
-      - name: Publish package
-        run: npm publish --provenance --access public
-
-      - name: Show npm logs (only if publish fails)
-        if: failure()
-        run: |
-          echo "Listing npm logs"
-          ls -l /home/runner/.npm/_logs/ || true
-          echo "Printing npm debug logs"
-          cat /home/runner/.npm/_logs/*debug*.log || true
+      - run: npm publish --provenance --access public
