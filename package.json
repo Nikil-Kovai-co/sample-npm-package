@@ -4,5 +4,9 @@
   "description": "Sample npm package",
   "main": "index.js",
   "type": "module",
-  "license": "MIT"
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Nikil-Kovai-co/sample-npm-package"
+  }
 }
