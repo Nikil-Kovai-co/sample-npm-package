@@ -1,0 +1,11 @@
+{
+  "name": "@your-npm-username/sample-npm-package",
+  "version": "1.0.0",
+  "description": "Sample package published using GitHub Actions with OIDC",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "node index.js"
+  },
+  "license": "MIT"
+}
