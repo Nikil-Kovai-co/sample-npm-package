@@ -16,6 +16,12 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - name: Debug OIDC claims
+        run: |
+          echo "GITHUB_REPOSITORY=$GITHUB_REPOSITORY"
+          echo "GITHUB_REF=$GITHUB_REF"
+          echo "GITHUB_WORKFLOW_REF=$GITHUB_WORKFLOW_REF"
+
       - uses: actions/setup-node@v4
         with:
           node-version: 20
