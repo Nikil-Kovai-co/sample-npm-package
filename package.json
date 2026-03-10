@@ -1,7 +1,7 @@
 {
-  "name": "@nikil-srinivasan/sample-npm-package",
+  "name": "@nikil.srinivasan/sample-npm-package",
   "version": "1.0.0",
-  "description": "Sample npm package published via GitHub Actions using OIDC",
+  "description": "Sample npm package",
   "main": "index.js",
   "type": "module",
   "license": "MIT"
