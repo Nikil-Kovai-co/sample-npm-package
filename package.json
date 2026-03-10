@@ -1,11 +1,8 @@
 {
-  "name": "@your-npm-username/sample-npm-package",
+  "name": "@nikil-srinivasan/sample-oidc-package",
   "version": "1.0.0",
-  "description": "Sample package published using GitHub Actions with OIDC",
+  "description": "Sample npm package published via GitHub Actions OIDC",
   "main": "index.js",
   "type": "module",
-  "scripts": {
-    "test": "node index.js"
-  },
   "license": "MIT"
 }
